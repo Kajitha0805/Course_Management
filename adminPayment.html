@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>A-Z<br>Institute</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./adminstudentTable.html">Student
+                    Management</a></li>
+            <li><a href="./adminAddCourses.html">Course Management</a></li>
+            <li><a href="./entrollment.html">Entrollments</a></li>
+            <li><a href="./adminPayment.html">Payment Management</a></li>
+            <li><a href="./adminReport.html">Report</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="search-container" style="display: block;">
+        <label for="searchStudent">Search by StudentID:</label>
+        <input type="text" id="searchStudent" placeholder="Enter StudentID">
+    </div>
+    
+    <main>
+
+         
+        <div class="table-container">
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>StudentID</th>
+                        <th>CourseID</th>
+                        <th>Date</th>
+                        <th>PayAmount</th>
+                        <th>PendingAmount</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <button id="add-row">Add Payment</button>
+        </div> 
+       
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h1 id="modal-title">Add Course</h1>
+                <form id="modal-form">
+                    <label for="StudentID">StudentID:</label>
+                    <select id="StudentID" name="StudentID" required></select>
+                    <label for="CourseID">CourseID</label>
+                    <select id="CourseID" name="CourseID" required></select>
+                    <label for="Date">Date:</label>
+                    <input type="date" id="Date" name="Date" required></select>
+                    <label for="PayAmount">PayAmount:</label>
+                    <input type="number" id="PayAmount" name="PayAmount" required>
+                    <label for="PendingAmount">PendingAmount:</label>
+                    <input type="number" id="PendingAmount" name="PendingAmount" required>
+                    <button type="submit" id="save-btn" class="btn">Save</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="./adminPageDesign.js"></script>
+    <script src="./adminPayment.js"></script>
+</body>
+
+</html>

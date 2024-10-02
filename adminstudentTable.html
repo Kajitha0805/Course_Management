@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .section {
+            display: block;
+            border: 1px solid #330066;
+            border-radius: 20px;
+            box-shadow: 5px 5px 10px #330066;
+            ;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Student Table -->
+    <div id="studentTablePage">
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <h1>A-Z<br>Institute</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="./adminstudentTable.html">Student Management</a></li>
+                    <li><a href="./adminAddCourses.html">Course Management</a></li>
+                    <li><a href="./entrollment.html">Entrollments</a></li>
+                    <li><a href="./adminPayment.html">Payment Management</a></li>
+                    <li><a href="./adminReport.html">Report</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+
+        <div class="search-container" style="display: block;">
+            <label for="searchStudent">Search by StudentID:</label>
+            <input type="text" id="searchStudent" placeholder="Enter StudentID">
+        </div>
+        
+
+        <main>
+            <div class="table-container">
+                <table id="data-table">
+                    <thead>
+                        <tr>
+                            <th>StudentID</th>
+                            <th>FirstName</th>
+                            <th>LastName</th>
+                            <th>Age</th>
+                            <th>DOB</th>
+                            <th>NIC-Number</th>
+                            <th>Gender</th>
+                            <th>Tel-Number</th>
+                            <th>Email</th>
+
+
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+                    </tbody>
+                </table>
+                <button id="add-row">Add Student</button>
+            </div>
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h1 id="modal-title">Add Student</h1>
+                    <form id="modal-form">
+
+                        <label for="StudentID">StudentID:</label>
+                        <input type="text" id="StudentID" name="StudentID" required>
+
+                        <label for="FirstName">FirstName:</label>
+                        <input type="text" id="FirstName" name="FirstName" required>
+
+                        <label for="LastName">LastName:</label>
+                        <input type="text" id="LastName" name="LastName" required>
+
+                        <label for="Age">Age:</label>
+                        <input type="number" id="Age" name="Age" required>
+
+                        <label for="dob">DOB:</label>
+                        <input type="date" id="dob" name="dob" required>
+
+                        <label for="NIC-Number">NIC-Number:</label>
+                        <input type="text" id="NICNumber" name="NIC-Number" required>
+
+                        <label for="Gender">Gender:</label>
+                        <select name="Gender" id="Gender" required>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+
+                        <label for="TelNumber">TelNumber:</label>
+                        <input type="number" id="TelNumber" name="TelNumber" required>
+
+                        <label for="Email">Email:</label>
+                        <input type="email" id="Email" name="Email" required>
+
+                        <div id="passwordSection">
+                            <label for="Password">Password:</label>
+                            <input type="password" id="Password" name="Password">
+
+                            <label for="Confirm-Password">Confirm-Password:</label>
+                            <input type="password" id="ConfirmPassword" name="Confirm-Password">
+                        </div>
+                        <button type="submit" id="save-btn" class="btn">Save</button>
+                    </form>
+                </div>
+            </div>
+
+
+            <!-- Send Notifications Section -->
+            <div class="section" id="send-notifications">
+                <h1>Send Notifications</h1>
+                <div class="form-group">
+                    <label for="notificationNIC">NIC Number</label>
+                    <input type="text" id="notificationNIC" placeholder="Enter NIC number">
+                </div>
+                <div class="form-group">
+                    <label for="notificationText">Notification Text</label>
+                    <textarea id="notificationText" rows="4" placeholder="Enter notification text"></textarea>
+                </div>
+                <div class="form-group">
+                    <button onclick="sendNotification()">Send Notification</button>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="./adminPageDesign.js"></script>
+    <script src="./adminstudentTable.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="studentBeforeLogin">
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <h1>A-Z<br>Institute</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="./studentMainHome.html">Home</a></li>
+                    <li><a href="./aboutUs.html">About Us</a></li>
+                    <li><a href="./conductUs.html">Conduct Us</a></li>
+                    <li><a href="./availableCourses.html">Courses</a></li>
+                    <li><a href="./studentLoginPage.html" id="modalBtn">Login</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+        <!-- student Login Section -->
+        <div class="container" id="loginSection">
+            <h1>Login</h1>
+
+            <form action="" id="loginForm">
+                <div class="formGroup">
+                    <label for="userNicnumber">NIC-Number:</label>
+                    <input type="text" name="userNicnumber" id="userNicnumber" required="">
+                </div>
+
+                <div class="formGroup">
+                    <label for="loginPassword">Password:</label>
+                    <input type="password" name="loginPassword" id="loginPassword" required="">
+                </div>
+                
+
+                <button class="btn" type="submit" onclick="loadProfile()">Login</button>
+
+            </form>
+
+        </div>
+    </div>
+
+   
+    <script src="./adminPageDesign.js"></script>
+    <script src="./studentLogin.js"></script>
+</body>
+
+</html>

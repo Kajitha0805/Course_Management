@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .boxs {
+            display: block;
+            border: 1px solid #330066;
+            border-radius: 20px;
+            box-shadow: 5px 5px 10px #330066;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>A-Z<br>Institute</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./adminstudentTable.html">Student
+                        Management</a></li>
+                <li><a href="./adminAddCourses.html">Course Management</a></li>
+                <li><a href="./entrollment.html">Entrollments</a></li>
+                <li><a href="./adminPayment.html">Payment Management</a></li>
+                <li><a href="./adminReport.html">Report</a></li>
+
+            </ul>
+            <div class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+
+        <button id="generateReport" class="btn">Generate Report About Student</button>
+
+    <table id="report-table" >
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Full Name</th>
+                <th>Age</th>
+                <th>DOB</th>
+                <th>NIC Number</th>
+                <th>Course</th>
+                <th>Gender</th>
+                <th>Admission Fee</th>
+                <th>Payments</th>
+                <th>Tel-Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Report rows will be dynamically generated here -->
+        </tbody>
+    </table>
+        <!-- reportEnd -->
+        <div class="boxs">
+            <button onclick="countStudents()">View Total Count Of Students</button>
+            <h3 id="CountStudents"></h3>
+        </div>
+        <br>
+
+        <div class="boxs">
+            <button onclick="countCourses()">View Total Count Of Courses</button>
+            <h3 id="countCourses"></h3>
+        </div>
+        <br>
+
+        <div class="boxs">
+            <h1>Calculate Total Income</h1>
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date">
+            <br>
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date">
+            <br>
+            <button onclick="calculateIncome()">Calculate Income</button>
+            <p id="AdmissionFeeCollection"></p>
+            <p id="paymentCollection"></p>
+            <p id="total-income">Total Income: RS0.00</p>
+        </div>
+        <script src="./adminReport.js"></script>
+        <script src="adminPageDesign.js"></script>
+    </main>
+</body>
+
+</html>

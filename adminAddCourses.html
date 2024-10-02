@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>A-Z<br>Institute</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./adminstudentTable.html">Student
+                    Management</a></li>
+            <li><a href="./adminAddCourses.html">Course Management</a></li>
+            <li><a href="./entrollment.html">Entrollments</a></li>
+            <li><a href="./adminPayment.html">Payment Management</a></li>
+            <li><a href="./adminReport.html">Report </a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="search-container" style="display: block;">
+        <label for="searchCourse">Search by CourseID:</label>
+        <input type="text" id="searchCourse" placeholder="Enter CourseID">
+    </div>
+    <main>
+        <div class="table-container">
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>CourseID</th>
+                        <th>Course Name</th>
+                        <th>Course Fee(LKR)</th>
+                        <th>Course Duration(Months)</th>
+                        <th>Beginner/Intermediate</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                    
+                </tbody>
+            </table>
+            <button id="add-row">Add Course</button>
+        </div>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h1 id="modal-title">Add Course</h1>
+                <form id="modal-form">
+                    <label for="CourseID">CourseID:</label>
+                    <input type="text" id="CourseID" name="CourseID" required>
+                    <label for="Course-Name">Course-Name:</label>
+                    <input type="text" id="CourseName" name="Course-Name" required>
+                    <label for="Course-Fee">Course-Fee(LKR):</label>
+                    <input type="number" id="CourseFee" name="Course-Fee" required>
+                    <label for="Course-Duration">Course-Duration(Months):</label>
+                    <select  id="CourseDuration" name="Course-Duration" required>
+                        <option value="2 Month">2 Months</option>
+                        <option value="3 Month">3 Months</option>
+                        <option value="4 Month">4 Months</option>
+                        <option value="5 month">5 Months</option>
+                        <option value="6 Month">6 Months</option>
+                    </select>
+                    <label for="Beginner/Intermediate">Beginner/Intermediate:</label>
+                    <select id="BeginnerOrIntermediate" name="Beginner/Intermediate" required>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                    </select>
+                    <button type="submit" id="save-btn" class="btn">Save</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="./adminCourseTable.js"></script>
+    <script src="./adminPageDesign.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>A-Z<br>Institute</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./adminstudentTable.html">Student
+                        Management</a></li>
+                <li><a href="./adminAddCourses.html">Course Management</a></li>
+                <li><a href="./entrollment.html">Entrollments</a></li>
+                <li><a href="./adminPayment.html">Payment Management</a></li>
+                <li><a href="./adminReport.html">Report </a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <div class="search-container" style="display: block;">
+        <label for="searchStudent">Search by StudentID:</label>
+        <input type="text" id="searchStudent" placeholder="Enter StudentID">
+    </div>
+    
+    <main>
+
+        
+    <div class="table-container">
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>EntrollmentID</th>
+                    <th>StudentID</th>
+                    <th>CourseID</th>
+                    <th>JoinDate</th>
+                    <th>AdmissionFee</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+            </tbody>
+        </table>
+        <button id="add-row">Add</button>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1 id="modal-title">Add</h1>
+            <form id="modal-form">
+                <label for="EntrollmentID">EntrollmentID:</label>
+                <input type="text" id="EntrollmentID" name="EntrollmentID" required>
+
+                <label for="StudentID">StudentID</label>
+               <select name="StudentID" id="StudentID">
+
+               </select>
+
+                <label for="CourseID">CourseID:</label>
+                <select name="CourseID" id="CourseID">
+                    
+                </select>
+
+                <label for="JoinDate">JoinDate:</label>
+                <input type="date" id="JoinDate" name="JoinDate" required>
+
+                <label for="AdmissionFee">AdmissionFee:</label>
+                <input type="text" id="AdmissionFee" name="AdmissionFee" required>
+
+                <button type="submit" id="save-btn" class="btn">Save</button>
+            </form>
+        </div>
+    </div>
+    </main>
+    <script src="./entrollment.js"></script>
+    <script src="./adminPageDesign.js"></script>
+</body>
+
+</html>
